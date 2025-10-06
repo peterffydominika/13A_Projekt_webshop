@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="Termekek" Height="450" Width="800">
     <Grid>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="DataGrid_SelectionChanged" Margin="10,10,10,10"/>
+        <DataGrid x:Name="dataGrid" 
+                  AutoGenerateColumns="False" 
+                  IsReadOnly="False" 
+                  CanUserAddRows="True" 
+                  CanUserDeleteRows="True" 
+                  SelectionChanged="DataGrid_SelectionChanged" 
+                  Margin="10,10,10,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto" />
+                <DataGridTextColumn Header="Név" Binding="{Binding Nev}" Width="*" />
+                <DataGridTextColumn Header="Mennyiség" Binding="{Binding Mennyiseg}" Width="Auto" />
+                <DataGridTextColumn Header="Egységár" Binding="{Binding Egysegar}" Width="Auto" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
