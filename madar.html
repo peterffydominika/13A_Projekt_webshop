@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisállat webshop</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <script src="tap.js"></script>
+    <script>
+        // Amikor a felhasználó elér egy bizonyos pontot az oldalon, a felfele nyíl gomb megjelenik
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("felfele-gomb").style.display = "block";
+            } else {
+                document.getElementById("felfele-gomb").style.display = "none";
+            }
+        }
+
+        // Amikor a felhasználó megnyomja a gombot, az oldal felgörget a tetejére
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <button onclick="scrollToTop()" id="felfele-gomb" title="Feljebb" style="font-size: 150%;">
+        👆
+    </button>
+    <ul class="navbar-nav mx-auto">
+        <div class="user_option">
+            <a href="rolunk.html" class="klink" style="background-color: #00FFFF;">
+                Kezdőlap
+            </a>
+            <a href="index.html" class="klink" style="background-color: #00FFFF;">
+                Főoldal
+            </a>
+            <a href="kosar.html" class="nav-item nav-link klink" style="background-color: #00FFFF;">
+                Kosár
+            </a>
+            <a href="index.html" class="nav-item nav-link klink"  style="background-color: #00FFFF;">
+                Vissza
+            </a>
+            <br>
+            <br>
+            <a href="#kalitkak" class="klink" style="background-color: #00FFFF;">
+                Kalitkák
+            </a>
+            <a href="#eledel" class="klink" style="background-color: #00FFFF;">
+                Eledelek
+            </a>
+            <a href="#jatekok" class="nav-item nav-link klink" style="background-color: #00FFFF;">
+                Játékok
+            </a>
+        </div>
+    </ul>
+    <div>
+        <h1 id="kalitka" style="background-color: lightblue; margin-left: 100px; text-shadow: 2px 2px white; margin-top: 50px; width: 1000px">Kalitkák</h1>
+    </div>
+    <div class="content" style="margin-left: 100px; height: 1600px;">
+        <div class="boxh"><img src="img/madarak/kalitka1.png"><h2>Ferplast Piano 6 kalitka</h2><p>A Ferplast Piano 6 kalitka egy tágas otthont kínál a törpepapagájok számára, emellett sokoldalú kiegészítőkkel rendelkezik. A mellékelt tartozékok műanyagból készültek, könnyen tisztíthatóak. A tükör és a madárfürdő gondoskodik a madarak szórakoztatásáról.</p><p>Mérete: H 87 x Sz 46,5 x M 70 cm</p><p>Ár: 78 000 Ft</p><input type="number" name="Mennyiség" id="hq1" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Ferplast Piano 6 kalitka",Number(document.getElementById("hq1").value),78000); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxh"><img src="img/madarak/kalitka2.png"><h2>Montana Finca Play madárkalitka</h2><p>A ketrec tetején egy praktikus játszótető található. A tartozékok közt megtalálható továbbá egy kivehető ürülékrács és egy kihúzható fiók is. A Montana Finca Play madárkalitka stabil 360°-os görgőkön áll, amelyekkel könnyen mozgatható.</p><p>Mérete: H 77 x Sz 71 x M 165 cm</p><p>Ár: 120 000 Ft</p><input type="number" name="Mennyiség" id="hq2" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Montana Finca Play madárkalitka",Number(document.getElementById("hq2").value),120000); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxh"><img src="img/madarak/kalitka3.png"><h2>Ferplast Planeta madárház</h2><p>Nagy és tágas röptető kanárik, pintyek vagy madárcsoportok számára. Összesen 8 ajtóval, 10 ülőrúddal és 2 itatópalackkal. 4 görgővel a rugalmas elhelyezéshez. Biztonságos rácstávolság: 9,8 mm</p><p>Mérete: H 99,5 x Sz 53 x M 171,5 cm</p><p>Ár: 82 290 Ft</p><input type="number" name="Mennyiség" id="hq3" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Ferplast Planeta madárház",Number(document.getElementById("hq3").value),82290); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxh"><img src="img/madarak/kalitka4.png"><h2>Savic Primo 60 Open Empire madárkalitka</h2><p>Magas kalitka kanárik és más egzotikus madarak számára levehető tetővel és kivehető alsó tálcával, ülőrudakkal, etetőkkel, ivókúttal és madárfürdetővel, rácstávolság: 9,5 mm</p><p>Mérete: H 80 x Sz 50 x M 115 cm</p><p>Ár: 50 690 Ft</p><input type="number" name="Mennyiség" id="hq4" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Savic Primo 60 Open Empire madárkalitka",Number(document.getElementById("hq4").value),50690); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxh"><img src="img/madarak/kalitka5.png"><h2>Skyline Loretto XL madárház</h2><p>Kiváló minőségű madárház nyírfából készült elemekkel, forgatható etetőpulttal, fém aljtálcával és görgőkkel, 3 fém etető tálkával és 4 fa ülőrúddal, rácstávolság: 1,1 cm.</p><p>Mérete: H 78 x Sz 75 x M 175 cm</p><p>Ár: 120 570 Ft</p><br><input type="number" name="Mennyiség" id="hq5" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Skyline Loretto XL madárház",Number(document.getElementById("hq5").value),120570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxh"><img src="img/madarak/kalitka6.png"><h2>TIAKI Robin XXL fa madárkalitka</h2><p>Nagy fakeretes ketrec kanárik és más kisebb madarak számára, teljesen felszerelt, szabadon pozicionálható és formázható ágszerű rudakkal, könnyen tisztítható, fenntartható, rácstávolság: 9,8 mm.</p><p>Mérete: H 113 x Sz 43 x M 81 cm</p><p> Ár: 80 000 Ft</p><input type="number" name="Mennyiség" id="hq6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("TIAKI Robin XXL fa madárkalitka",Number(document.getElementById("hq6").value),80000); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxh"><img src="img/madarak/kalitka7.png"><h2>Ferplast Rekord 3 Fehér madár kalitka</h2><p>Nagy fémketrec kanárik és más kisebb madarak számára, szabadon pozicionálható és formázható ágszerű rudakkal, könnyen tisztítható, fenntartható, kihúzható az alja, rácstávolság: 8 mm.</p><p>Mérete: 49 x 30 x 48,5 cm</p><p> Ár: 20 000 Ft</p><input type="number" name="Mennyiség" id="hq6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Ferplast Rekord 3 Fehér madár kalitka",Number(document.getElementById("hq7").value),20000); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxh"><img src="img/madarak/kalitka8.png"><h2>MADÁRKALITKA ARANY-BARNA</h2><p>Henger alaku, etetőkkel, hintával, ülőrúddal, alomtálcával, felakasztható, könnyen takarítható, rácstávolság: 7,5 mm.</p><p>Mérete: 40 x 40 x 70 cm</p><p> Ár: 20 250 Ft</p><input type="number" name="Mennyiség" id="hq6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("MADÁRKALITKA ARANY-BARNA",Number(document.getElementById("hq8").value),20250); alert("Kosárhoz adva!")'>Kosárba</button></div>
+    </div>
+
+    <div id="eledel">
+        <h1 style="background-color: lightblue; margin-left: 100px; text-shadow: 2px 2px white; margin-top: 50px;">Eledelek</h1>
+    </div> 
+    <div class="content" style="margin-left: 100px; height: 1240px;">
+        <div class="boxel"><img src="img/madarak/kaja2.jpg"><h2>Versele-Laga Prestige madáreledel óriáspapagájoknak</h2><p>Mennyisége: 4 kg</p><p>Ár: 5 200 Ft</p><input type="number" name="Mennyiség" id="hq1" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Versele-Laga Prestige madáreledel óriáspapagájoknak",Number(document.getElementById("hq1").value),5200); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/kaja1.jpg"><h2>Versele-Laga Prestige eledel közepes papagájoknak </h2><p>Mennyisége: 3 kg</p><p>Ár: 4 900 Ft</p><input type="number" name="Mennyiség" id="hq2" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Versele-Laga Prestige eledel közepes papagájoknak",Number(document.getElementById("hq2").value),4900); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/kaja3.jpg"><h2>Versele-Laga Prestige Premium eledel nagy papagájoknak</h2><p>Mennyisége: 10 kg</p><p>Ár: 16 290 Ft</p><input type="number" name="Mennyiség" id="hq3" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Versele-Laga Prestige Premium eledel nagy papagájoknak",Number(document.getElementById("hq3").value),16290); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/kaja4.jpg"><h2>JR Farm törpepapagáj eledel</h2><p>Mennyisége: 1 kg</p><p>Ár: 2 690 Ft</p><input type="number" name="Mennyiség" id="hq4" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("JR Farm törpepapagáj eledel",Number(document.getElementById("hq4").value),2690); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/kaja5.jpg"><h2>Versele-Laga Prestige hullámos papagáj</h2><p>Mennyisége: 20 kg</p><p>Ár: 17 290 Ft</p><br><input type="number" name="Mennyiség" id="hq5" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Versele-Laga Prestige hullámos papagáj",Number(document.getElementById("hq5").value),17290); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/kaja5.jpg"><h2>Versele-Laga Prestige hullámos papagáj</h2><p>Mennyisége: 4 kg</p><p>Ár: 3 450 Ft</p><input type="number" name="Mennyiség" id="hq6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Versele-Laga Prestige hullámos papagáj",Number(document.getElementById("hq6").value),3450); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/kaja6.jpg"><h2>Vitakraft Trio-Mix kréker hullámos papagájoknak</h2><p>Mennyisége: 2x3 rúd</p><p>Ár: 1 350 Ft</p><input type="number" name="Mennyiség" id="hq6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Vitakraft Trio-Mix kréker hullámos papagájoknak",Number(document.getElementById("hq7").value),1350); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/kaja7.jpg"><h2>Versele-Laga gyümölcskeverék papagájoknak</h2><p>Mennyisége: 1,2 kg</p><p>Ár: 5 540 Ft</p><input type="number" name="Mennyiség" id="hq6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Versele-Laga gyümölcskeverék papagájoknak",Number(document.getElementById("hq8").value),5540); alert("Kosárhoz adva!")'>Kosárba</button></div>
+     </div>
+    <br>
+    <div id="jatekok">
+        <h1 style="background-color: lightblue; margin-left: 100px; text-shadow: 2px 2px white; margin-top: 50px;">Papagáj játékok</h1>
+    </div>       
+    <div class="content" style="margin-left: 100px; height: 1300px;">
+        <div class="boxel"><img src="img/madarak/jatek1.jpg"><h2>JR Birds Natur ínyenc lánc</h2><p>Mérete: H 6 x Sz 10 x M 25 cm</p><p>Ár: 2 600 Ft</p><input type="number" name="Mennyiség" id="hq1" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("JR Birds Natur ínyenc lánc",Number(document.getElementById("hq1").value),2600); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/jatek2.jpg"><h2>TIAKI óriáskerék madárhinta</h2><p>Mérete: H 20 x Sz 15 x M 6,3 cm</p><p>Ár: 1 790 Ft</p><input type="number" name="Mennyiség" id="hq2" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("TIAKI óriáskerék madárhinta",Number(document.getElementById("hq2").value),1790); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/jatek3.jpg"><h2>TIAKI tépkedőjáték</h2><p>Mérete: H 18 x Sz 13 x M 12 cm</p><p>Ár: 1 950 Ft</p><input type="number" name="Mennyiség" id="hq3" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("TIAKI tépkedőjáték",Number(document.getElementById("hq3").value),1950); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/jatek4.jpg"><h2>TIAKI Kebab rágójáték madaraknak</h2><p>Mérete: Ø 3,5 x H 28 cm</p><p>Ár: 1 420 Ft</p><input type="number" name="Mennyiség" id="hq4" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("TIAKI Kebab rágójáték madaraknak",Number(document.getElementById("hq4").value),1420); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/jatek5.jpg"><h2>TIAKI natúr függőhíd</h2><p>Mérete: H 77 x Sz 15 x M 2 cm</p><p>Ár: 2 570 Ft</p><br><input type="number" name="Mennyiség" id="hq5" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("TIAKI natúr függőhíd",Number(document.getElementById("hq5").value),2570); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/jatek6.jpg"><h2>TIAKI természetes juta ülőrúd</h2><p>Mérete: Ø 1,9 x H 45 cm</p><br><p>Ár: 1 450 Ft</p><input type="number" name="Mennyiség" id="hq6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("TIAKI természetes juta ülőrúd",Number(document.getElementById("hq6").value),1450); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/jatek7.jpg"><h2>TIAKI madárlétra</h2><p>Mérete: H 30,5 x Sz 9 x M 1,5 cm</p><br><p>Ár: 1 050 Ft</p><input type="number" name="Mennyiség" id="hq6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("TIAKI madárlétra",Number(document.getElementById("hq7").value),1050); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxel"><img src="img/madarak/jatek8.jpg"><h2>TIAKI hintakorona</h2><p>Mérete: Ø 23 cm</p><br><p>Ár: 3 200 Ft</p><input type="number" name="Mennyiség" id="hq6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("TIAKI hintakorona",Number(document.getElementById("hq8").value),3200); alert("Kosárhoz adva!")'>Kosárba</button></div>
+    </div>
+    <div class="footer">
+        <p style="color: white;">A képek a <a target="_blank" style="color: cornflowerblue;" href="http://www.zooplus.hu">zooplus</a> weboldalról származnak.</p>
+    </div>
+</body>
+</html>
