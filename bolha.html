@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisállat webshop</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <ul class="navbar-nav mx-auto">
+        <div class="user_option">
+            <a href="rolunk.html" class="klink" style="background-color: #00FFFF;">
+                Kezdőlap
+            </a>
+            <a href="index.html" class="klink" style="background-color: #00FFFF;">
+                Főoldal
+            </a>
+            <a href="kutya.html" class="nav-item nav-link klink" style="background-color: #00FFFF;">
+                Vissza
+            </a>
+            <a href="kosar.html" class="nav-item nav-link klink" style="background-color: #00FFFF;">
+                Kosár
+            </a>
+        </div>
+    </ul>
+    <div class="content">
+        <div class="boxp"><img src="img/kutya/bolha/b1.jpg"><h2>FORESTO kutyanyakörv 8 kg feletti kutyáknak</h2><br><p>Ár: 12 000 Ft</p><br><input type="number" name="Mennyiség" id="q1" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("FORESTO kutyanyakörv 8 kg feletti kutyáknak", Number(document.getElementById("q1").value), 12000); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxp"><img src="img/kutya/bolha/b2.jpg"><h2>FORESTO kutyanyakörv 8 kg alatti kutyáknak</h2><p>Ár: 10 000 Ft</p><br><input type="number" name="Mennyiség" id="q2" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("FORESTO kutyanyakörv 8 kg alatti kutyáknak", Number(document.getElementById("q2").value), 10000); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxp"><img src="img/kutya/bolha/b3.jpg"><h2>ADVANTIX spot on 1 x 0,4 ml <br> (< 4kg) </h2><br><p>Ár: 3 500 Ft</p><br><br><input type="number" name="Mennyiség" id="q3" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("ADVANTIX spot on 1 x 0,4 ml, < 4kg", Number(document.getElementById("q3").value), 3500); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxp"><img src="img/kutya/bolha/b4.jpg"><h2>ADVANTIX spot on 1 x 2,5 ml <br> (10-25 kg) </h2><br><p>Ár: 7 000 Ft</p><input type="number" name="Mennyiség" id="q4" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("ADVANTIX spot on 1 x 2,5 ml, 10-25kg", Number(document.getElementById("q4").value), 7000); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxp"><img src="img/kutya/bolha/b5.jpg"><h2>ADVANTIX spot on 1 x 4 ml <br> (25< kg) </h2><br><p>Ár: 9 500 Ft</p><br><input type="number" name="Mennyiség" id="q5" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("ADVANTIX spot on 1 x 4 ml, > 25kg", Number(document.getElementById("q5").value), 9500); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxp"><img src="img/kutya/bolha/b6.jpg"><h2>FRONTLINE <br> TRI-ACT spot on L 3 x 4 ml <br> (20-40 kg)</h2><p>Ár: 11 390 Ft</p><br><input type="number" name="Mennyiség" id="q6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("FRONTLINE TRI-ACT spot on L 3 x 4 ml 20-40 kg", Number(document.getElementById("q6").value), 11390); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxp"><img src="img/kutya/bolha/b7.jpg"><h2>FRONTLINE <br> TRI-ACT spot on XL 3 x 5 ml <br> (40-60 kg)</h2><p>Ár: 14 700 Ft</p><br><input type="number" name="Mennyiség" id="q7" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("FRONTLINE TRI-ACT spot on XL 3 x 5 ml 40-60 kg", Number(document.getElementById("q7").value), 14700); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxp"><img src="img/kutya/bolha/b8.jpg"><h2>FRONTLINE <br> TRI-ACT spot on M 3 x 2,5 ml <br> (10-20 kg)</h2><p>Ár: 9 300 Ft</p><br><input type="number" name="Mennyiség" id="q8" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba(document.getElementById("q8").value)("FRONTLINE TRI-ACT spot on L 3 x 2,5 ml 10-20 kg", db, 9300); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxp"><img src="img/kutya/bolha/b9.jpg"><h2>FRONTLINE <br> TRI-ACT spot on S 3 x 1 ml <br> (5-10 kg)</h2><p>Ár: 8 400 Ft</p><input type="number" name="Mennyiség" id="q9" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("FRONTLINE TRI-ACT spot on L 3 x 1 ml 5-10 kg", Number(document.getElementById("q9").value), 8400); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxp"><img src="img/kutya/bolha/b10.jpg"><h2>FRONTLINE <br> TRI-ACT spot on XS 3 x 0,4 ml <br> (2-5 kg)</h2><p>Ár: 7 500 Ft</p><input type="number" name="Mennyiség" id="q10" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("FRONTLINE TRI-ACT spot on L 3 x 0,4 ml 2-5 kg", Number(document.getElementById("q10").value), 7500); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxp"><img src="img/kutya/bolha/b11.jpg"><h2>FRONTPRO rágótabletta kutyáknak<br> (25-40 kg) 3 DB</h2><p>Ár: 12 400 Ft</p><br><input type="number" name="Mennyiség" id="q11" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("FRONTPRO rágótabletta kutyáknak 25-40 kg", Number(document.getElementById("q11").value), 12400); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxp"><img src="img/kutya/bolha/b12.jpg"><h2>FRONTPRO rágótabletta kutyáknak <br> (4-10 KG) 3 DB</h2><p>Ár: 11 000 Ft</p><input type="number" name="Mennyiség" id="q12" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("FRONTPRO rágótabletta kutyáknak 4-10 kg", Number(document.getElementById("q12").value), 11000); alert("Kosárhoz adva!")'>Kosárba</button></div>
+    </div>
+    <div class="footer">
+        <p style="color: white;">A képek a <a target="_blank" href="http://www.zooplus.hu">zooplus</a> weboldalról származnak.</p>
+    </div>
+    <script src="tap.js"></script>
+</body>
+</html>
