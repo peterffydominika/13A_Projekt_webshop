@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfApp1.Bejelentkezes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Bejelentkezes" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="userNameLB" Content="Felhasználónév:" HorizontalAlignment="Left" Margin="200,100,0,0" VerticalAlignment="Top" Height="29" Width="101"/>
+        <TextBox x:Name="userNameTB" HorizontalAlignment="Left" Margin="316,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="303" Height="29" TextChanged="userNameTB_TextChanged"/>
+        <Label x:Name="passwordLB" Content="Jelszó:" HorizontalAlignment="Left" Margin="200,158,0,0" VerticalAlignment="Top" Height="29" Width="101"/>
+        <TextBox x:Name="passwordTB" HorizontalAlignment="Left" Margin="316,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="303" Height="29"/>
+        <Button Content="Bejelentkezés" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Height="38" Width="128"/>
+
+    </Grid>
+</Window>
