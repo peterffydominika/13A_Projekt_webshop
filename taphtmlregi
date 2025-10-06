@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisállat webshop</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="tap.js"></script>
+</head>
+<body>
+    <script>
+        // Amikor a felhasználó elér egy bizonyos pontot az oldalon, a felfele nyíl gomb megjelenik
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("felfele-gomb").style.display = "block";
+            } else {
+                document.getElementById("felfele-gomb").style.display = "none";
+            }
+        }
+
+        // Amikor a felhasználó megnyomja a gombot, az oldal felgörget a tetejére
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <button onclick="scrollToTop()" id="felfele-gomb" title="Feljebb" style="font-size: 150%;">
+        👆
+    </button>
+    <ul >
+        <div class="user_option">
+            <a href="rolunk.html" class="klink">
+                Kezdőlap
+            </a>
+            <a href="index.html" class="klink">
+                Főoldal
+            </a>
+            <a href="kosar.html" class="klink">
+                Kosár
+            </a>
+            <a href="reg.html" class="klink">
+                Regisztráció
+            </a>
+            <a href="bej.html" class="klink">
+                Bejelentkezés
+            </a>
+            <a  target="_blank" href="https://cricksydog.hu/kutyatap-valaszto-kviz-kerdesek/?_gl=1*uy4wb5*_up*MQ..*_ga*NzgzMzAxMzAzLjE3MTIzMTM5NTE.*_ga_E19XWDK3ZW*MTcxMjMxMzk1MS4xLjAuMTcxMjMxMzk1MS4wLjAuMTI5NjczMjA2OQ.." class="klink" >
+                Kutyatáp választó kvíz a Crisky Dog-on
+            </a>
+            <a href="kutya.html" class="klink">
+                Vissza
+            </a>
+        </div>
+    </ul>
+    <div class="content">
+        <div class="boxt"><img src="img/tapok/tap1.png" id="t1"><h2>Brit Premium by Nature Light</h2><p>Alacsony zsírtartalmú száraz kutyatáp, sovány pulykafehérjét és könnyen emészthető zabot tartalmaz, támogatja a súlykontrollt, gazdag omega-3 zsírsavakban, vitamindús áfonyával, alacsony gluténtartalommal</p><p>Mennyiség: 15 kg</p><p>Ár: 13 390 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q1" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(Number(q1));var ar = Number(13390); localStorage.setItem("Brit Premium by Nature Light", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/tap2.png" id="t2"><h2>Brit Premium by Nature Adult Medium</h2><p>Fehérjében & energiában gazdag, teljes értékű eledel közepes méretű felnőtt kutyáknak. Különösen jól tolerálható, sok csirkehússal (45%), antioxidánsokkal, ballasztanyagokkal, omega-3/6 zsírsavakkal.</p><p>Mennyiség: 15 kg</p><p>Ár: 12 890 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q2" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(Number(q2));var ar = 12890; localStorage.setItem("Brit Premium by Nature Adault Medium", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/tap3.png" id="t3"><h2>Brit Premium by Nature Adult Large</h2><p>Fehérjében gazdag, teljes értékű eledel nagy méretű felnőtt kutyáknak. Különösen könnyen emészthető, csirkehúsban gazdag (45%), antioxidánsok és porcvédelem a stabil ízületekért.</p><p>Mennyiség: 15 kg</p><p>Ár: 13 690 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q3" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(q3);var ar = 13690; localStorage.setItem("Brit Premium by Nature Adault Large", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/tap4.png" id="t4"><h2>Brit Premium by Nature Sensitive Lamb & Rice</h2><p>Hipoallergén száraztáp báránnyal és rizzsel, speciálisan érzékeny kutyának. Jól tolerálható, búza, kukorica, szója nélkül. Allergia, emésztési gondok, bőrbetegségek ellen, omega zsírsavakkal.</p><p>Mennyiség: 15 kg</p><p>Ár: 19 990 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q4" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(q4);var ar = 19990; localStorage.setItem("Brit Premium by Nature Sensitive Lamb & Rice", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/tap5.png" id="t5"><h2>Brit Premium by Nature Senior L/XL</h2><p>Kiegyensúlyozott szárazeledel 7 éves és idősebb nagytestű, idős kutyáknak, sovány csirkefehérje és könnyen emészthető zab, csökkentett energiatartalommal, finom zöldségkínálattal, omega-3 zsírsavakban gazdag.</p><p>Mennyiség: 15 kg</p><p>Ár: 13 990 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q5" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(q5);var ar = 13990; localStorage.setItem("Brit Premium by Nature Senior L/XL", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/tap6.png" id="t6"><h2>PEDIGREE Adult marhahús és szárnyas</h2><p>Ez a táp ideális a felnőtt kutya létfontosságú szükségleteinek kielégítésére: segít fenntartani az egészséges bőrt és szőrzetet, támogatja a kutya természetes erős védekezőképességét, elősegíti a jó emésztést és tisztítja a fogakat.</p><p>Mennyiség: 15 kg</p><p>Ár: 29 400 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(q6);var ar = 29400; localStorage.setItem("PEDIGREE Adult marhahús és szárnyas", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/tap7.png" id="t7"><h2>PEDIGREE Adult hal és zöldség</h2><p>Szárazeledel felnőtt kutyáknak, speciálisan formázott krokettek a fogtisztítás érdekében, mesterséges színezékek és aromák nélkül, B-vitaminnal és cinkkel a fényes szőrzetért és a puha bőrért, rostok és prebiotikumok: az optimális emésztésért</p><p>Mennyiség: 15 / 12 / 6 kg</p><p>Ár: 22 050 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q7" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(q7);var ar = 22050; localStorage.setItem("PEDIGREE Adult hal és zöldség", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/tap8.png" id="t8"><h2>PEDIGREE Mini marha és zöldség</h2><p>A Pedigree Mini 100%-ban teljes értékű és kiegyensúlyozott eledel kistestű kutyáknak. Zaftos húslébe mártott kiváló minőségű összetevőkből készül ami ellenállhatatlanul ínycsiklandóvá teszi kis kedvence számára.</p><p>Mennyiség: 12 / 6 kg</p><p>Ár: 16 990 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q8" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(q8);var ar = 16990; localStorage.setItem("PEDIGREE Mini marha és zöldség", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/tap9.png" id="t9"><h2>PEDIGREE Junior Medium baromfi</h2><p>Teljesértékű szárazeledel közepes testméretű, kölyök kutyusok számára baromfihússal. Az új receptúra E-vitamint (mely egy antioxidáns), és ásványi anyagokat tartalmaz, melyek az egészséges immunrendszer fejlődését támogatják.</p><p>Mennyiség: 15 / 3 kg</p><p>Ár: 17 990 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q9" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(q9);var ar = 17990; localStorage.setItem("PEDIGREE Junior Medium baromfi", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/tap10.png" id="t10"><h2>Friskies Adult Balance Száraz kutyatáp</h2><p>A Friskies Adult Balance kutyatáp kiváló választás házi kedvencének, különleges összetevői által ugyanis hozzájárul a felnőtt kutyák energikusságához, kiegyensúlyozott étrendjéhez.</p><p>Mennyiség: 15 / 6 kg</p><p>Ár: 16 190 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q10" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(q10);var ar = 16190; localStorage.setItem("Friskies Adult Balance Száraz kutyatáp", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/tap11.png" id="t11"><h2>Friskies Adult Active marha</h2><p>Teljes értékű szárazeledel magasabb energiaigényű kutyáknak. Ízletes marhahússal, fehérjékkel, ásványi anyagokkal, vitaminokkal és omega zsírsavakkal a teljesítmény és az állóképesség támogatásához</p><p>Mennyiség: 15 / 6 kg</p><p>Ár: 16 190 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q11" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(q11);var ar = 16190; localStorage.setItem("Friskies Adult Active marha", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/akcio1.png" id="t12"><h2>Royal Canin Veterinary Canine Early Renal</h2><p>Teljes értékű száraz diétás eledel felnőtt kutyáknak a veseműködés támogatására a krónikus veseelégtelenség korai szakaszában. </p><p>Mennyiség: 15 kg</p><p>Ár: <s>31 990 Ft</s><br> 17 590 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q12" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(q12);var ar = 17590; localStorage.setItem("Royal Canin Veterinary Canine Early Renal", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/tap12.png"><h2>Happy Dog Sensible Pure</h2><p>Kiváló minőségű kutyatáp gabona nélkül, német minőség, állati fehérjeforrásként valamennyi változatban csak egyféle hús, jól emészthető és ízletes, vitaminokkal és ásványi anyagokkal.</p><p>Mennyiség: 800 g</p><p>Ár: 1 600 Ft/ konzerv</p><input type="number" name="Mennyiség" id="q12" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(q12);var ar = 1600; localStorage.setItem("Happy Dog Sensible Pure", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/tap13.png"><h2>PEDIGREE Adult Classic</h2><p>Pedigree Adult Classic nedvestáp felnőtt kutyáknak, kiegyensúlyozott összetétellel, ízletes hússal; ízfokozók, mesterséges színezékek és aromák nélkül.</p><p>Mennyiség: 400 g</p><p>Ár: 1 170 Ft/ konzerv</p><input type="number" name="Mennyiség" id="q11" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(q13);var ar = 16190; localStorage.setItem("Friskies Adult Active marha", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/tapok/tap14.png"><h2>Rocco Junior pulyka & borjúszív</h2><p>A Rocco Junior húseledel növekedésben lévő kutyáknak. Receptúráit speciálisan a kölyök- és fiatal kutyák növekedési időszaka megkövetelte szükségletek figyelembe vételével alakították ki.</p><p>Mennyiség: 400 g</p><p>Ár: 615 Ft/ konzerv</p><input type="number" name="Mennyiség" id="q12" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick=' var db = document.getElementById(q14);var ar = 17590; localStorage.setItem("Royal Canin Veterinary Canine Early Renal", db, ar); alert("Kosárhoz adva!")'>Kosárba</button></div>
+    </div>
+<div class="footer">
+    <p style="color: white;">A képek a <a target="_blank" href="http://www.zooplus.hu">zooplus</a> weboldalról származnak.</p>
+</div>
+</body>
+</html>
