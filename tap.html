@@ -46,31 +46,21 @@
     <button onclick="scrollToTop()" id="felfele-gomb" title="Feljebb" style="font-size: 150%;">
         👆
     </button>
-    <ul >
-        <div class="user_option">
-            <a href="kezdolap.html" class="klink" style="background-color: #00FFFF;">
-                Kezdőlap
-            </a>
-            <a href="index.html" class="klink" style="background-color: #00FFFF;">
-                Főoldal
-            </a>
-            <a href="kosar.html" class="klink" style="background-color: #00FFFF;">
-                Kosár
-            </a>
-            <a href="reg.html" class="klink" style="background-color: #00FFFF;">
-                Regisztráció
-            </a>
-            <a href="bej.html" class="klink" style="background-color: #00FFFF;">
-                Bejelentkezés
-            </a>
-            <a  target="_blank" href="https://cricksydog.hu/kutyatap-valaszto-kviz-kerdesek/?_gl=1*uy4wb5*_up*MQ..*_ga*NzgzMzAxMzAzLjE3MTIzMTM5NTE.*_ga_E19XWDK3ZW*MTcxMjMxMzk1MS4xLjAuMTcxMjMxMzk1MS4wLjAuMTI5NjczMjA2OQ.." class="klink" style="background-color: #00FFFF;">
-                Kutyatáp választó kvíz a Crisky Dog-on
-            </a>
-            <a href="kutya.html" class="klink" style="background-color: #00FFFF;">
-                Vissza
-            </a>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <h1 class="site-title">Kisállat webshop</h1>
+            <nav class="site-nav" role="navigation" aria-label="Fő navigáció">
+                <ul>
+                    <li><a class="klink" href="kezdolap.html">Kezdőlap</a></li>
+                    <li><a class="klink" href="reg.html">Regisztráció</a></li>
+                    <li><a class="klink" href="index.html">Főoldal</a></li>
+                    <li><a class="klink" href="kosar.html">Kosár</a></li>
+                    <li><a class="klink" href="kutya.html">Vissza</a></li>
+                    <li><a target="_blank" href="https://cricksydog.hu/kutyatap-valaszto-kviz-kerdesek/?_gl=1*uy4wb5*_up*MQ..*_ga*NzgzMzAxMzAzLjE3MTIzMTM5NTE.*_ga_E19XWDK3ZW*MTcxMjMxMzk1MS4xLjAuMTcxMjMxMzk1MS4wLjAuMTI5NjczMjA2OQ.." class="klink" style="background-color: #00FFFF;">Kutyatáp választó kvíz a Crisky Dog-on</a></li>
+                </ul>
+            </nav>
         </div>
-    </ul>
+    </header>
     <div class="content">
         <div class="boxt"><img src="kep/tapok/tap1.png" ><h2 id="nev">Brit Premium by Nature Light</h2><p>Alacsony zsírtartalmú száraz kutyatáp, sovány pulykafehérjét és könnyen emészthető zabot tartalmaz, támogatja a súlykontrollt, gazdag omega-3 zsírsavakban, vitamindús áfonyával, alacsony gluténtartalommal</p><p>Mennyiség: 15 kg</p><p>Ár: 13 390 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q1" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Brit Premium by Nature Light",Number(document.getElementById("q1").value),13390); alert("Kosárhoz adva!")'>Kosárba</button></div>
         <div class="boxt"><img src="kep/tapok/tap2.png" ><h2 id="nev">Brit Premium by Nature Adult Medium</h2><p>Fehérjében & energiában gazdag, teljes értékű eledel közepes méretű felnőtt kutyáknak. Különösen jól tolerálható, sok csirkehússal (45%), antioxidánsokkal, ballasztanyagokkal, omega-3/6 zsírsavakkal.</p><p>Mennyiség: 15 kg</p><p>Ár: 12 890 Ft/ 15kg</p><input type="number" name="Mennyiség" id="q2" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Brit Premium by Nature Medium",Number(document.getElementById("q2").value),12890); alert("Kosárhoz adva!")'>Kosárba</button></div>
@@ -94,3 +84,4 @@
 <script src="tap.js"></script>
 </body>
 </html>
+
