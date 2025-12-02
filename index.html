@@ -22,41 +22,45 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="kep/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Kisállat webshop - etető, játék és kiegészítők kutyáknak, macskáknak és egyéb kis állatoknak.">
 </head>
 <body>
-    <ul class="navbar-nav mx-auto">
-        <div class="user_option">
-            <a href="kosar.html" class="nav-item nav-link klink" style="background-color: #00FFFF;">
-                Kosár
-            </a>
-            <a href="kezdolap.html" class="nav-item nav-link klink" style="background-color: #00FFFF;">
-                Kezdőlap
-            </a>
-            <a href="reg.html" class="nav-item nav-link klink" style="background-color: #00FFFF;">
-                Regisztráció
-            </a>
-            <a href="bej.html" class="nav-item nav-link klink" style="background-color: #00FFFF;">
-                Bejelentkezés
-            </a>
-            <a href="rolunk.html" class="klink" style="background-color: #00FFFF;">
-                Rólunk
-            </a>
+    <a class="skip-link" href="#main">Ugrás a tartalomhoz</a>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <h1 class="site-title"><a href="index.html">Kisállat webshop</a></h1>
+            <nav class="site-nav" role="navigation" aria-label="Fő navigáció">
+                <ul>
+                    <li><a class="klink" href="rolunk.html">Kezdőlap</a></li>
+                    <li><a class="klink" href="reg.html">Regisztráció</a></li>
+                    <li><a class="klink" href="bej.html">Bejelentkezés</a></li>
+                    <li><a class="klink" href="kosar.html">Kosár</a></li>
+                </ul>
+            </nav>
         </div>
-    </ul>
+    </header>
+
     <div class="content">
-        <div class="box"><a href="kutya.html"><img src="kep/kutya.png" id="kutya"></a><h2>Kutya</h2></div>
+        <div class="box"><a href="kutya.html"><img src="kep/kutya.png" id="kutya" alt="Kutya"></a><h2>Kutya</h2></div>
 
-        <div class="box"><a href="macska.html"><img src="kep/macska.png" id="macska"></a><h2>Macska</h2></div>
+        <div class="box"><a href="macska.html"><img src="kep/macska.png" id="macska" alt="Macska"></a><h2>Macska</h2></div>
 
-        <div class="box"><a href="ragcsalo.html"><img src="kep/ragcsalo.png" id="ragcsalo"></a><h2>Rágcsáló</h2></div>
+        <div class="box"><a href="ragcsalo.html"><img src="kep/ragcsalo.png" id="ragcsalo" alt="Rágcsáló"></a><h2>Rágcsáló</h2></div>
 
-        <div class="box"><a href="hullo.html"><img src="kep/hullo.png" id="hullo"></a><h2>Hüllő</h2></div>
+        <div class="box"><a href="hullo.html"><img src="kep/hullo.png" id="hullo" alt="Hüllő"></a><h2>Hüllő</h2></div>
 
-        <div class="box"><a href="madar.html"><img src="kep/madar.png" id="madar"></a><h2>Madár</h2></div>
+        <div class="box"><a href="madar.html"><img src="kep/madar.png" id="madar" alt="Madár"></a><h2>Madár</h2></div>
 
-        <div class="box"><a href="hal.html"><img src="kep/hal.png" id="hal"></a><h2>Hal</h2></div>
+        <div class="box"><a href="hal.html"><img src="kep/hal.png" id="hal" alt="Hal"></a><h2>Hal</h2></div>
 
     </div>
+
+    <button id="felfele-gomb" title="Lap tetejére" aria-label="Lap tetejére">↑</button>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">© Kisállat webshop — Kapcsolat: info@kisallat.hu</div>
+    </footer>
+
+    <script src="tap.js"></script>
 </body>
 </html>
-
