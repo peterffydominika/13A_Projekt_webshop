@@ -1,6 +1,43 @@
 body{
     background-image: url(kep/hatter.png);
 }
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  background: #fff;
+  padding: 8px 12px;
+  z-index: 9999;
+}
+
+
+.site-header {
+  background: rgba(255,255,255,0.9);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+.site-title a { text-decoration: none; color: #007bff; font-weight: 800; font-size: 1.25rem; }
+.site-nav ul { list-style: none; display: flex; gap: 10px; margin: 0; padding: 0; }
+.site-nav a.klink { display: inline-block; padding: 8px 12px; text-decoration: none; color: #003399; background:#e6f7ff; border-radius:6px; border:1px solid rgba(0,0,0,0.08); font-weight:700; }
+.site-nav a.klink:focus, .site-nav a.klink:hover { background:#cfeeff; outline: none; }
+
 button{
     background-color: 	#00BFFF;
     font-weight: bold;
@@ -356,3 +393,4 @@ form{
     margin-bottom: 10px;
 
 }
+
