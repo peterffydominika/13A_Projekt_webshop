@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background-image: url(img/hatter.png);
+  background-image: url(kep/hatter.png);
   background-size: cover;
   background-position: center;
   color: #222;
@@ -174,3 +174,4 @@ form{ margin: 1rem auto; font-size: 1rem; text-align: center; background-color: 
 @media (min-width: 481px) and (max-width: 899px) {
   .content { grid-template-columns: repeat(2, minmax(200px, 1fr)); }
 }
+
