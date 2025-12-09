@@ -40,25 +40,19 @@ function App() {
       >
         👆
       </button>
-      <ul>
-        <div>
-          <a href="index.html" className="klink" style={{ backgroundColor: '#00FFFF' }}>
-            Tovább a webshopba
-          </a>
-          <a href="kosar.html" className="klink" style={{ backgroundColor: '#00FFFF' }}>
-            Kosár
-          </a>
-          <a href="reg.html" className="klink" style={{ backgroundColor: '#00FFFF' }}>
-            Regisztráció
-          </a>
-          <a href="bej.html" className="klink" style={{ backgroundColor: '#00FFFF' }}>
-            Bejelentkezés
-          </a>
-          <a href="rolunk.html" className="klink" style={{ backgroundColor: '#00FFFF' }}>
-            Rólunk
-          </a>
+      <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <h1 class="site-title">Kisállat webshop</h1>
+            <nav class="site-nav" role="navigation" aria-label="Fő navigáció">
+                <ul>
+                    <li><a class="klink" href="index.html">Tovább a webshopba</a></li>
+                    <li><a class="klink" href="rolunk.html">Rólunk</a></li>
+                    <li><a class="klink" href="reg.html">Regisztráció</a></li>
+                    <li><a class="klink" href="kosar.html">Kosár</a></li>
+                </ul>
+            </nav>
         </div>
-      </ul>
+    </header><br />
       <p id="kezdolapu">Üdvözlünk a Kisállat Webshop webáruházban!</p>
       <Carousel id="demo" className="carousel slide">
         <Carousel.Item>
