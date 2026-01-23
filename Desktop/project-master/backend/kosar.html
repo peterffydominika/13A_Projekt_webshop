@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisállat webshop - Kosár</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+</head>
+<body>
+    <a class="skip-link" href="#main">Ugrás a tartalomhoz</a>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <h1 class="site-title"><a href="index.html">Kisállat webshop</a></h1>
+            <nav class="site-nav" role="navigation" aria-label="Fő navigáció">
+                <ul>
+                    <li><a class="klink" href="rolunk.html">Kezdőlap</a></li>
+                    <li><a class="klink" href="reg.html">Regisztráció</a></li>
+                    <li><a class="klink" href="bej.html">Bejelentkezés</a></li>
+                    <li><a class="klink" href="kosar.html">Kosár <span class="cart-count"></span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="content container" role="main" style="padding-bottom:80px;">
+        <section class="cart-checkout-grid" style="max-width:1100px;margin:1.5rem auto;display:grid;grid-template-columns:1fr 380px;gap:20px;align-items:start;">
+
+            <!-- Left: cart -->
+            <div class="cart-column" style="background:#f7fbfd;padding:16px;border-radius:8px;display:flex;flex-direction:column;align-items:flex-start;">
+                <h2 style="margin-top:0;padding:6px 0;">Kosár</h2>
+                <div id="cart-table" aria-live="polite" style="width:100%;max-width:720px;"></div>
+
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px;width:100%;max-width:720px;">
+                    <button onclick="torles()" class="klink" style="padding:8px 12px;">Kosár ürítése</button>
+                    <div style="text-align:right">
+                        <div style="font-weight:800;">Végösszeg: <span id="cart-total">0 Ft</span></div>
+                        <div style="margin-top:8px;display:flex;gap:8px;justify-content:flex-end;">
+                            <button onclick="fizetes()" style="background:#007bff;color:#fff;padding:8px 12px;border-radius:6px;border:none;">Fizetés</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: checkout / user data form -->
+            <aside class="checkout-column" style="display:block;">
+                <div class="adatok-container" style="background:#fff;padding:16px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);width:100%;max-width:360px;margin:0 auto;">
+                    <h2 style="margin-top:0;">Szállítási és fizetési adatok</h2>
+                    <form id="checkout-form" action="javascript:void(0)">
+                        <label for="nev">Név</label>
+                        <input id="nev" name="nev" type="text" placeholder="Kandó Kálmán" required>
+
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="email" placeholder="kandok@kkszki.hu" required>
+
+                        <label for="tel">Telefonszám</label>
+                        <input id="tel" name="tel" type="tel" placeholder="+36 30 881 3082" required>
+
+                        <label for="varos">Város</label>
+                        <input id="varos" name="varos" type="text" placeholder="Miskolc" required>
+
+                        <label for="utca">Utca, házszám</label>
+                        <input id="utca" name="utca" type="text" placeholder="Palóczy utca 3" required>
+
+                        <hr style="margin:14px 0;">
+
+                        <label for="kartyanev">Kártyabirtokos neve</label>
+                        <input id="kartyanev" name="kartyanev" type="text" placeholder="Kandó Kálmán">
+
+                        <label for="kartyaszam">Kártyaszám</label>
+                        <input id="kartyaszam" name="kartyaszam" type="text" placeholder="0000-0000-0000-0000">
+
+                        <div style="display:flex;gap:8px;">
+                            <div style="flex:0 0 32%;">
+                                <label for="lejarho">Lejárati hó</label>
+                                <input id="lejarho" name="lejarho" type="text" placeholder="MM" style="width:100%;box-sizing:border-box;">
+                            </div>
+                            <div style="flex:0 0 34%;">
+                                <label for="lejarev">Lejárati év</label>
+                                <input id="lejarev" name="lejarev" type="text" placeholder="YYYY" style="width:100%;box-sizing:border-box;">
+                            </div>
+                            <div style="flex:0 0 34%;">
+                                <label for="cvv">CVV</label>
+                                <input id="cvv" name="cvv" type="text" placeholder="123" style="width:100%;box-sizing:border-box;">
+                            </div>
+                        </div>
+
+                        <div style="margin-top:12px;text-align:left">
+                            <input type="checkbox" id="aszf" name="aszf" required>
+                            <label for="aszf">Elfogadom az ÁSZF-et</label>
+                        </div>
+
+                        <button type="submit" style="margin-top:12px;background:#007bff;color:#fff;padding:8px 12px;border-radius:6px;border:none;">Megrendelés</button>
+                    </form>
+                </div>
+            </aside>
+
+        </section>
+    </main>
+
+    <button id="felfele-gomb" title="Lap tetejére" aria-label="Lap tetejére">↑</button>
+    <footer class="footer" role="contentinfo" style="position:fixed;left:0;right:0;bottom:0;background:#333;color:#fff;padding:10px 0;text-align:center;">
+        <div class="container">© Kisállat webshop — Kapcsolat: info@kisallat.hu</div>
+    </footer>
+
+    <script src="tap.js"></script>
+    <script>
+        // render cart on page load and wire form submit
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof renderCart === 'function') renderCart();
+            var form = document.getElementById('checkout-form');
+            if (form) {
+                form.addEventListener('submit', function () {
+                    // simple client-side validation already enforced by 'required'
+                    alert('Köszönjük! A megrendelés rögzítésre került (teszt módban).');
+                    // here you would normally send data to server; we clear cart for demo
+                    torles();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

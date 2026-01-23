@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisállat webshop</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+    <a class="skip-link" href="#main">Ugrás a tartalomhoz</a>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <h1 class="site-title"><a href="index.html">Kisállat webshop</a></h1>
+            <nav class="site-nav" role="navigation" aria-label="Fő navigáció">
+                <ul>
+                    <li><a class="klink" href="rolunk.html">Kezdőlap</a></li>
+                    <li><a class="klink" href="reg.html">Regisztráció</a></li>
+                    <li><a class="klink" href="bej.html">Bejelentkezés</a></li>
+                    <li><a class="klink" href="kosar.html">Kosár <span class="cart-count"></span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="content" role="main">
+        <div class="boxt"><img src="img/halak/a1.jpg" ><h2 id="nev">AquaEl Leddy 60 Day & Night szögletes akváriumkészlet Fekete</h2><p>Mennyiség: 54 l</p><p>Ár: 31 200</p><input type="number" name="Mennyiség" id="q1" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("AquaEl Leddy 60 Day & Night szögletes akváriumkészlet",Number(document.getElementById("q1").value),31200); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/halak/a2.jpg" ><h2 id="nev">AquaEl Fan 1 Plus akváriumi belsőszűrő 60-100 l vízhez</h2><p>Mérete: 5x5x15 cm</p><p>Ár: 6 870</p><input type="number" name="Mennyiség" id="q2" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("AquaEl Fan 1 Plus akváriumi belsőszűrő",Number(document.getElementById("q2").value),6870); alert("Kosárhoz adva!")'>Kosárba</button></div>
+    </main>
+    <button id="felfele-gomb" title="Lap tetejére" aria-label="Lap tetejére">↑</button>
+    <footer class="footer" role="contentinfo">
+        <div class="container"><p style="color: white; margin:0">A képek a <a target="_blank" href="http://www.zooplus.hu">zooplus</a> weboldalról származnak.</p></div>
+    </footer>
+    <script src="tap.js"></script>
+</body>
+</html>

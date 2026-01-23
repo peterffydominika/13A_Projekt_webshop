@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisállat webshop</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <a class="skip-link" href="#main">Ugrás a tartalomhoz</a>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <h1 class="site-title"><a href="index.html">Kisállat webshop</a></h1>
+            <nav class="site-nav" role="navigation" aria-label="Fő navigáció">
+                <ul>
+                    <li><a class="klink" href="rolunk.html">Rólunk</a></li>
+                    <li><a class="klink" href="reg.html">Regisztráció</a></li>
+                    <li><a class="klink" href="bej.html">Bejelentkezés</a></li>
+                    <li><a class="klink" href="kosar.html">Kosár <span class="cart-count"></span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="content container" role="main">
+        <div class="boxp">
+            <img src="img/kutya/porazok/p1.jpg" id="p1">
+            <h2>Visszahúzható Póráz Közepes Méretű Kutyák Számára</h2>
+            <p>Ár: 2 690 Ft</p>
+            <input type="number" name="Mennyiség" id="q1" placeholder="Kívánt mennyiség">
+            <p> </p>
+            <button type="submit" onclick='kosarba("Visszahúzható Póráz Közepes Méretű Kutyák Számára", Number(document.getElementById("q1").value), 2690); alert("Kosárhoz adva!")'>Kosárba</button>
+        </div>
+        <div class="boxp">
+            <img src="img/kutya/porazok/p2.jpg" id="p2">
+            <h2>Kisállat automatikus visszahúzható póráz Kutya póráz éjszakai világítással</h2>
+            <p>Ár: 4 020 Ft</p>
+            <input type="number" name="Mennyiség" id="q2" placeholder="Kívánt mennyiség">
+            <p> </p>
+            <button type="submit" onclick='kosarba("Kisállat automatikus visszahúzható póráz Kutya póráz éjszakai világítással", Number(document.getElementById("q2").value), 4020); alert("Kosárhoz adva!")'>Kosárba</button>
+        </div>
+        <div class="boxp">
+            <img src="img/kutya/porazok/p3.jpg" id="p3">
+            <h2>Fényvisszaverő Nylon Kutyapóráz 49,9 Kg-ig Terjedő Kisállatok Számára</h2>
+            <p>Ár: 5 720 Ft</p>
+            <input type="number" name="Mennyiség" id="q3" placeholder="Kívánt mennyiség">
+            <p> </p>
+            <button type="submit" onclick='kosarba("Fényvisszaverő Nylon Kutyapóráz 49,9 Kg-ig Terjedő Kisállatok Számára", Number(document.getElementById("q3").value), 5720); alert("Kosárhoz adva!")'>Kosárba</button>
+        </div>
+        <div class="boxp">
+            <img src="img/kutya/porazok/p4.jpg" id="p4">
+            <h2>Automata Visszahúzható Kutyapóráz LED Vakuval Kültéri Kisállat Sétáló Futószalag</h2>
+            <p>Ár: 6 470 Ft</p>
+            <input type="number" name="Mennyiség" id="q4" placeholder="Kívánt mennyiség">
+            <p> </p>
+            <button type="submit" onclick='kosarba("Automata Visszahúzható Kutyapóráz LED Vakuval", Number(document.getElementById("q4").value), 6470); alert("Kosárhoz adva!")'>Kosárba</button>
+        </div>
+        <div class="boxp">
+            <img src="img/kutya/porazok/p5.jpg" id="p5">
+            <h2>Behúzható Kutyapóráz, 4,88 Méteres, 20,41 Kg-ig</h2>
+            <p>Ár: 4 875 Ft</p>
+            <input type="number" name="Mennyiség" id="q5" placeholder="Kívánt mennyiség">
+            <p> </p>
+            <button type="submit" onclick='kosarba("Behúzható Kutyapóráz, 4,88 Méteres, 20,41 Kg-ig", Number(document.getElementById("q5").value), 4875); alert("Kosárhoz adva!")'>Kosárba</button>
+        </div>
+        <div class="boxp">
+            <img src="img/kutya/porazok/p6.jpg" id="p6">
+            <h2>Nomad Tales Bloom szett: nyakörv + póráz, zafír</h2>
+            <p>Ár: 9 670 Ft</p>
+            <input type="number" name="Mennyiség" id="q6" placeholder="Kívánt mennyiség">
+            <p> </p>
+            <button type="submit" onclick='kosarba("Nomad Tales Bloom szett: nyakörv + póráz, zafír", Number(document.getElementById("q6").value), 9670); alert("Kosárhoz adva!")'>Kosárba</button>
+        </div>
+        <div class="boxp">
+            <img src="img/kutya/porazok/p7.jpg" id="p7">
+            <h2>Rukka® Joy Mini retriever póráz, fekete</h2>
+            <p>Ár: 4 720 Ft</p>
+            <input type="number" name="Mennyiség" id="q7" placeholder="Kívánt mennyiség">
+            <p> </p>
+            <button type="submit" onclick='kosarba("Rukka® Joy Mini retriever póráz, fekete", Number(document.getElementById("q7").value), 4720); alert("Kosárhoz adva!")'>Kosárba</button>
+        </div>
+        <div class="boxp">
+            <img src="img/kutya/porazok/p8.jpg" id="p8">
+            <h2>Rukka® Bliss Eco póráz, szürke</h2>
+            <p>Ár: 6 270 Ft</p>
+            <input type="number" name="Mennyiség" id="q8" placeholder="Kívánt mennyiség">
+            <p> </p>
+            <button type="submit" onclick='kosarba("Rukka® Bliss Eco póráz, szürke", Number(document.getElementById("q8").value), 6270); alert("Kosárhoz adva!")'>Kosárba</button>
+        </div>
+        <div class="boxp">
+            <img src="img/kutya/porazok/p9.jpg" id="t9">
+            <h2>Rukka® állítható kötélpóráz, fekete</h2>
+            <p>Ár: 8 890 Ft</p>
+            <input type="number" name="Mennyiség" id="q9" placeholder="Kívánt mennyiség">
+            <p> </p>
+            <button type="submit" onclick='kosarba("Rukka® állítható kötélpóráz, fekete", Number(document.getElementById("q9").value), 8890); alert("Kosárhoz adva!")'>Kosárba</button>
+        </div>
+        <div class="boxp">
+            <img src="img/kutya/porazok/p10.jpg" id="t10">
+            <h2>Rukka® Moon Eco póráz, olívazöld</h2>
+            <p>Ár: 6 390 Ft</p>
+            <input type="number" name="Mennyiség" id="q10" placeholder="Kívánt mennyiség">
+            <p> </p>
+            <button type="submit" onclick='kosarba("Rukka® Moon Eco póráz, olívazöld", Number(document.getElementById("q10").value), 6390); alert("Kosárhoz adva!")'>Kosárba</button>
+        </div>
+        <div class="boxp">
+            <img src="img/kutya/porazok/p11.jpg" id="t11">
+            <h2>Rukka® állítható kötélpóráz, piros</h2>
+            <p>Ár: 8 890 Ft</p>
+            <input type="number" name="Mennyiség" id="q11" placeholder="Kívánt mennyiség">
+            <p> </p>
+            <button type="submit" onclick='kosarba("Rukka® állítható kötélpóráz, piros", Number(document.getElementById("q11").value), 8890); alert("Kosárhoz adva!")'>Kosárba</button>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">A képek a <a target="_blank" href="http://www.zooplus.hu">zooplus</a> weboldalról származnak.</div>
+    </footer>
+
+    <script src="tap.js"></script>
+</body>
+</html>

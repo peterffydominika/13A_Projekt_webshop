@@ -1,0 +1,36 @@
+# Apache rewrite szabályok
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # API kérések átirányítása
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^api/(.*)$ api/$1 [L]
+</IfModule>
+
+# CORS és környezeti változók
+<IfModule mod_headers.c>
+    SetEnv ADMIN_SECRET Admin123
+    
+    # CORS preflight (OPTIONS) kezelése Apache szinten
+    # Ha a kérés OPTIONS, állítsuk be a CORS headereket és adjunk 200-at
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With, X-Admin-Secret"
+    Header always set Access-Control-Max-Age "3600"
+</IfModule>
+
+# OPTIONS preflight kezelése - adjunk üres 200-as választ
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule ^(.*)$ - [R=200,L]
+</IfModule>
+
+# PHP beállítások
+<IfModule mod_php7.c>
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+    php_value max_execution_time 300
+    php_value max_input_time 300
+</IfModule>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisállat webshop</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="tap.js"></script>
+</head>
+<body>
+    <script>
+        // Amikor a felhasználó elér egy bizonyos pontot az oldalon, a felfele nyíl gomb megjelenik
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("felfele-gomb").style.display = "block";
+            } else {
+                document.getElementById("felfele-gomb").style.display = "none";
+            }
+        }
+
+        // Amikor a felhasználó megnyomja a gombot, az oldal felgörget a tetejére
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <button onclick="scrollToTop()" id="felfele-gomb" title="Feljebb" style="font-size: 150%;">
+        👆
+    </button>
+    <ul >
+        <div class="user_option">
+            <a href="rolunk.html" class="klink" style="background-color: #00FFFF;">
+                Kezdőlap
+            </a>
+            <a href="index.html" class="klink" style="background-color: #00FFFF;">
+                Főoldal
+            </a>
+            <a href="kosar.html" class="klink" style="background-color: #00FFFF;">
+                Kosár
+            </a>
+            <a href="reg.html" class="klink" style="background-color: #00FFFF;">
+                Regisztráció
+            </a>
+            <a href="bej.html" class="klink" style="background-color: #00FFFF;">
+                Bejelentkezés
+            </a>
+            <a  href="macska.html" class="klink" style="background-color: #00FFFF;">
+                Vissza
+            </a>
+        </div>
+    </ul>
+    <div class="content">
+        <div class="boxt"><img src="img/macska/tapok/tap1.png"><h2>Wild Freedom száraz macskatáp Adault Deep Forest</h2><p>A Wild Freedom a vadmacska eredeti étrendjén alapuló, fajnak megfelelő macskatáp. A gabonamentes receptúrák a sok friss hús mellett vadon termő gyógynövényeket is tartalmaznak. Szarvas ízű, gabonamentes.</p><p>Mennyiség: 2 kg</p><p>Ár: 5 490 Ft/ 2kg</p><input type="number" name="Mennyiség" id="q1" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Wild Freedom száraz macskatáp Adault Deep Forest", Number(document.getElementById("q1").value), 5490); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap2.png"><h2>Wild Freedom száraz macskatáp Senior Wide Country</h2><p>A Wild Freedom a vadmacska eredeti étrendjén alapuló, fajnak megfelelő macskatáp. A gabonamentes receptúrák a sok friss hús mellett vadon termő gyógynövényeket is tartalmaznak. Szárnyas ízű, gabonamentes.</p><p>Mennyiség: 2 kg</p><p>Ár: 5 490 Ft/ 2kg</p><input type="number" name="Mennyiség" id="q2" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='("Wild Freedom száraz macskatáp Senior Wide Country", Number(document.getElementById("q2")), 5490); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap3.png"><h2>Wild Freedom száraz macskatáp Adault Cold River</h2><p>A Wild Freedom a vadmacska eredeti étrendjén alapuló, fajnak megfelelő macskatáp. A gabonamentes receptúrák a sok friss hús mellett vadon termő gyógynövényeket is tartalmaznak. Lazac ízű, gabonamentes.</p><p>Mennyiség: 2 kg</p><p>Ár: 5 490 Ft/ 2kg</p><input type="number" name="Mennyiség" id="q3" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Wild Freedom száraz macskatáp Adault Cold River", Number(document.getElementById("q3")), 5490); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap4.png"><h2>Wild Freedom száraz macskatáp Kitten Wild Hills</h2><p>A Wild Freedom a vadmacska eredeti étrendjén alapuló, fajnak megfelelő macskatáp. A gabonamentes receptúrák a sok friss hús mellett vadon termő gyógynövényeket is tartalmaznak. Kacsa ízű, gabonamentes kölyök macskáknak.</p><p>Mennyiség: 2 kg</p><p>Ár: 5 490 Ft/ 2kg</p><input type="number" name="Mennyiség" id="q4" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Wild Freedom száraz macskatáp Kitten Wild Hills", Number(document.getElementById("q4")), 5490); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap5.png"><h2>Wild F. száraz macskatáp Adault Green Lands</h2><p>A Wild Freedom a vadmacska eredeti étrendjén alapuló, fajnak megfelelő macskatáp. A gabonamentes receptúrák a sok friss hús mellett vadon termő gyógynövényeket is tartalmaznak. Bárány ízű, gabonamentes sterilizált macskáknak.</p><p>Mennyiség: 2 kg</p><p>Ár: 5 490 Ft/ 2kg</p><input type="number" name="Mennyiség" id="q5" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Wild Freedom száraz macskatáp Adault Green Lands", Number(document.getElementById("q5")), 5490); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap6.png"><h2>Wild Freedom száraz macskatáp Adault Golden Valley</h2><p>A Wild Freedom a vadmacska eredeti étrendjén alapuló, fajnak megfelelő macskatáp. A gabonamentes receptúrák a sok friss hús mellett vadon termő gyógynövényeket is tartalmaznak. Nyúl ízű, gabonamentes.</p><p>Mennyiség: 2 kg</p><p>Ár: 5 490 Ft/ 2kg</p><input type="number" name="Mennyiség" id="q6" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Wild Freedom száraz macskatáp Adault Golden Valley", Number(document.getElementById("q6")), 5490); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap7.png"><h2>Wild Freedom száraz macskatáp Kitten Cold River</h2><p>A Wild Freedom a vadmacska eredeti étrendjén alapuló, fajnak megfelelő macskatáp. A gabonamentes receptúrák a sok friss hús mellett vadon termő gyógynövényeket is tartalmaznak. Lazac ízű, gabonamentes kölyök macskáknak.</p><p>Mennyiség: 2 kg</p><p>Ár: 5 490 Ft/ 2kg</p><input type="number" name="Mennyiség" id="q7" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Wild Freedom száraz macskatáp Kitten Cold River", Number(document.getElementById("q7")), 5490); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap8.png"><h2>Purizon Adult bárány & hal - gabonamentes</h2><p>Teljesen gabonamentes száraz macskatáp kiváló minőségű összetevőkből, valamint könnyen emészthető új-zélandi bárányhússal és friss hallal felnőtt macskák számára.</p><p>Mennyiség: 2 kg</p><p>Ár: 4 180 Ft/ 2kg</p><input type="number" name="Mennyiség" id="q8" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Purizon Adult bárány & hal - gabonamentes", Number(document.getElementById("q8")), 4180); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap9.png"><h2>Purizon Adult marha & szárnyas</h2><p>A minőségi Purizon száraz macskatáp a húsevő macska természetes táplálkozását veszi alapul. Az állati összetevők 70% részarányának köszönhetően ez az eledel különösen fehérjedús.</p><p>Mennyiség: 2 kg</p><p>Ár: 4 180 Ft/ 2kg</p><input type="number" name="Mennyiség" id="q9" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Purizon Adult marha & szárnyas", Number(document.getElementById("q9")), 4180); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap10.png"><h2>Purizon Adult pulyka & csirke</h2><p>A minőségi Purizon száraz macskatáp a húsevő macska természetes táplálkozását veszi alapul. Az állati összetevők 70% részarányának köszönhetően ez az eledel különösen fehérjedús.</p><p>Mennyiség: 2 kg</p><p>Ár: 4 580 Ft/ 2kg</p><input type="number" name="Mennyiség" id="q10" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Purizon Adult pulyka & csirke", Number(document.getElementById("q10")), 4180); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap11.png"><h2>Purizon Adult vaddisznó & csirke</h2><p>A minőségi Purizon száraz macskatáp a húsevő macska természetes táplálkozását veszi alapul. Az állati összetevők 70% részarányának köszönhetően ez az eledel különösen fehérjedús.</p><p>Mennyiség: 2 kg</p><p>Ár: 4 180 Ft/ 2kg</p><input type="number" name="Mennyiség" id="q11" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Purizon Adult vaddisznó & csirke", Number(document.getElementById("q11")), 4180); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap12.png"><h2>Purizon Kitten lazac & csirke</h2><p>A minőségi Purizon száraz macskatáp a húsevő macska természetes táplálkozását veszi alapul. Az állati összetevők 70% részarányának köszönhetően ez az eledel különösen fehérjedús.</p><p>Mennyiség: 2 kg</p><p>Ár: 4 580 Ft/ 2kg</p><input type="number" name="Mennyiség" id="q12" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Purizon Kitten lazac & csirke", Number(document.getElementById("q12")), 4580); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap13.png"><h2>Felix Soup</h2><p>Fenséges táplálékkiegészítő eledel felnőtt macskáknak. Leves apró darabkákkal. Válogatott receptek minőségi összetevőkből. Nagy víztartalommal.Házias válogatás (marha, csirke, bárány)</p><p>Mennyiség: 12 x 48g</p><p>Ár: 2 180 Ft/ doboz</p><input type="number" name="Mennyiség" id="q13" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Felix Soup", Number(document.getElementById("q13")), 2180); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap14.png"><h2>Felix Sensations szószban</h2><p>Teljes értékű nedveseledel felnőtt macskáknak: ízletes, ellenállhatatlan szószban mártózó, omlós marha-, pulyka-, kacsa- & bárányhúsdarabokkal. Már 48 tasakos gazdaságos csomagban is!</p><p>Mennyiség: <select><option>48  x 85g</option><option>24 x 85g</option></select></p><p>Ár: 7 980 Ft/ doboz</p><input type="number" name="Mennyiség" id="q14" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Felix Sensations szószban", Number(document.getElementById("q14")), 7980); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap15.png"><h2>Felix Fantastic aszpikban</h2><p>Kiegyensúlyozott nedvestáp felnőtt cicáknak. Omlós hús- és halfalatok aszpikban. Minőségi összetevőkből mesterséges színezékek és tartósítószerek nélkül. Praktikus tasakban! 48 x gazdaságos csomagban!</p><p>Mennyiség: <select><option>48  x 85g</option><option>24 x 85g</option></select></p><p>Ár: 7 980 Ft/ doboz</p><input type="number" name="Mennyiség" id="q15" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='("Felix Fantastic aszpikban", Number(document.getElementById("q15")), 7980); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap16.png"><h2>Felix Fantastic duplán finom</h2><p>Ezzel a gazdaságos csomaggal 48 tasakot kap kézhez, ami 4 különféle ízváltozatot foglal magában. Az étvágygerjesztő, aszpikban mártózó húsfalatok még a válogatós szobatigriseket is az etetőtálhoz csalogatják.</p><p>Mennyiség: <select><option>48  x 85g</option><option>24 x 85g</option></select></p><p>Ár: 7 980 Ft/ doboz</p><input type="number" name="Mennyiség" id="q16" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Felix Fantastic duplán finom", Number(document.getElementById("q16")), 7980); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap17.png"><h2>Wild Freedom Sterilised</h2><p>A Wild Freedom 98%-ban húsból, értékes belsőségekből és húsléből áll. A könnyen emészthető fehérjék és zsírok széles körű elfogadottságról és jó emészthetőségről gondoskodnak.</p><p>Mennyiség: <select><option>6  x 200g</option><option>6 x 400g</option></select></p><p>Ár: 3 620 Ft/ 6db</p><input type="number" name="Mennyiség" id="q17" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='kosarba("Wild Freedom Sterilised", Number(document.getElementById("q17")), 3620); alert("Kosárhoz adva!")'>Kosárba</button></div>
+        <div class="boxt"><img src="img/macska/tapok/tap18.png"><h2>Smilla szárnyastál</h2><p>A Smilla kiváló minőségű, gabonamentes, teljes értékű nedves macskatáp, amely ínyenc kedvencének ellenállhatatlan élményt nyújt. Nem tartalmaz hozzáadott cukrot és ízfokozókat, továbbá szója- és laktózmentes is.</p><p>Mennyiség: 12 x 200g</p><p>Ár: <s>4 980 Ft</s><br>4 490 / doboz</p><input type="number" name="Mennyiség" id="q18" placeholder="Kívánt mennyiség"><p> </p><button type="submit" onclick='("Smilla szárnyastál", Number(document.getElementById("q18")), 4490); alert("Kosárhoz adva!")'>Kosárba</button></div>
+    </div>
+<div class="footer">
+    <p style="color: white;">A képek a <a target="_blank" href="http://www.zooplus.hu">zooplus</a> weboldalról származnak.</p>
+</div>
+</body>
+</html>
