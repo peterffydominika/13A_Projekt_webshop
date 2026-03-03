@@ -19,6 +19,13 @@ CREATE TABLE felhasznalok (
     frissitve       TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+INSERT INTO `felhasznalok` (`id`, `felhasznalonev`, `email`, `jelszo_hash`, `keresztnev`, `vezeteknev`, `telefon`, `iranyitoszam`, `varos`, `cim`, `admin`, `email_megerositve`, `regisztralt`, `frissitve`) VALUES
+(1, 'janos123', 'janos.kovacs@gmail.com', '871b32b5f4e1b9ac25237dc7e4e175954c2dc6098aade48a8abefb585cbd53f2', 'János', 'Kovács', '06 30 123 4561', '1117', 'Budapest', 'Teszt utca 1.', 0, 1, '2026-03-03 07:24:45', '2026-03-03 07:24:45'),
+(2, 'anna456', 'anna.nagy@yahoo.com', '871b32b5f4e1b9ac25237dc7e4e175954c2dc6098aade48a8abefb585cbd53f2', 'Anna', 'Nagy', '06 30 123 4562', '1117', 'Budapest', 'Teszt utca 2.', 0, 1, '2026-03-03 07:24:45', '2026-03-03 07:24:45'),
+(3, 'peter789', 'peter.szabo@freemail.hu', '871b32b5f4e1b9ac25237dc7e4e175954c2dc6098aade48a8abefb585cbd53f2', 'Péter', 'Szabó', '06 30 123 4563', '1117', 'Budapest', 'Teszt utca 3.', 0, 1, '2026-03-03 07:24:45', '2026-03-03 07:24:45'),
+(4, 'eva101', 'eva.toth@protonmail.com', '871b32b5f4e1b9ac25237dc7e4e175954c2dc6098aade48a8abefb585cbd53f2', 'Éva', 'Tóth', '06 30 123 4564', '1117', 'Budapest', 'Teszt utca 4.', 0, 1, '2026-03-03 07:24:45', '2026-03-03 07:24:45'),
+(5, 'laszlo202', 'laszlo.horvath@gmail.com', '871b32b5f4e1b9ac25237dc7e4e175954c2dc6098aade48a8abefb585cbd53f2', 'László', 'Horváth', '06 30 123 4565', '1117', 'Budapest', 'Teszt utca 5.', 0, 1, '2026-03-03 07:24:45', '2026-03-03 07:24:45');
+
 CREATE TABLE kategoriak (
     id          TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     slug        VARCHAR(30) NOT NULL UNIQUE,
@@ -37,6 +44,27 @@ CREATE TABLE alkategoriak (
     FOREIGN KEY (kategoria_id) REFERENCES kategoriak(id) ON DELETE CASCADE,
     UNIQUE KEY egyedi_slug (kategoria_id, slug)
 );
+
+INSERT INTO `alkategoriak` (`id`, `kategoria_id`, `slug`, `nev`, `kep`, `sorrend`) VALUES
+(1, 1, 'poraz', 'Pórázok', NULL, 1),
+(2, 1, 'tal', 'Tálak', NULL, 2),
+(3, 1, 'ham', 'Hámok', NULL, 3),
+(4, 1, 'bolha', 'Bolha- és kullancsírtók', NULL, 4),
+(5, 1, 'nyakorv', 'Nyakörvek', NULL, 5),
+(6, 1, 'tap', 'Tápok', NULL, 6),
+(7, 2, 'jatek', 'Játékok', NULL, 1),
+(8, 2, 'tal', 'Tálak', NULL, 2),
+(9, 2, 'ham', 'Hámok', NULL, 3),
+(10, 2, 'bolha', 'Bolhaírtó szerek', NULL, 4),
+(11, 2, 'nyakorv', 'Nyakörvek', NULL, 5),
+(12, 2, 'tapm', 'Macska tápok', NULL, 6),
+(13, 3, 'horcsog', 'Hörcsög felszerelések', NULL, 1),
+(14, 3, 'nyul', 'Nyúl felszerelések', NULL, 2),
+(15, 3, 'tengerimalac', 'Tengerimalac felszerelések', NULL, 3),
+(16, 4, 'terrarium', 'Terráriumok & kiegészítők', NULL, 1),
+(17, 5, 'kalitka', 'Madárkalitkák', NULL, 1),
+(18, 5, 'madar-eledel', 'Madár eledelek', NULL, 2),
+(19, 5, 'madar-jatek', 'Madár játékok', NULL, 3);
 
 CREATE TABLE termekek (
     id              INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -103,6 +131,17 @@ CREATE TABLE rendelések (
     frissitve           TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (felhasznalo_id) REFERENCES felhasznalok(id) ON DELETE RESTRICT
 );
+INSERT INTO `rendelések` (`id`, `felhasznalo_id`, `rendelés_szam`, `statusz`, `osszeg`, `szallitasi_mod`, `fizetesi_mod`, `megjegyzes`, `szallitasi_nev`, `szallitasi_cim`, `szallitasi_varos`, `szallitasi_irsz`, `letrehozva`, `frissitve`) VALUES
+(1, 1, 'ORD-20260204-0001', 'kész', 58158, 'GLS futár', 'Bankkártya', 'Teszt rendelés', 'János Kovács', 'Teszt utca 1', 'Budapest', '1117', '2026-03-03 07:25:11', '2026-03-03 07:25:11'),
+(2, 1, 'ORD-20260204-0002', 'feldolgozás', 30991, 'GLS futár', 'Bankkártya', 'Teszt rendelés', 'János Kovács', 'Teszt utca 1', 'Budapest', '1117', '2026-03-03 07:25:11', '2026-03-03 07:25:11'),
+(3, 2, 'ORD-20260204-0003', 'feldolgozás', 44579, 'GLS futár', 'Bankkártya', 'Teszt rendelés', 'Anna Nagy', 'Teszt utca 2', 'Budapest', '1117', '2026-03-03 07:25:11', '2026-03-03 07:25:11'),
+(4, 2, 'ORD-20260204-0004', 'feldolgozás', 32999, 'GLS futár', 'Bankkártya', 'Teszt rendelés', 'Anna Nagy', 'Teszt utca 2', 'Budapest', '1117', '2026-03-03 07:25:11', '2026-03-03 07:25:11'),
+(5, 3, 'ORD-20260204-0005', 'kész', 81025, 'GLS futár', 'Bankkártya', 'Teszt rendelés', 'Péter Szabó', 'Teszt utca 3', 'Budapest', '1117', '2026-03-03 07:25:11', '2026-03-03 07:25:11'),
+(6, 3, 'ORD-20260204-0006', 'kész', 37954, 'GLS futár', 'Bankkártya', 'Teszt rendelés', 'Péter Szabó', 'Teszt utca 3', 'Budapest', '1117', '2026-03-03 07:25:11', '2026-03-03 07:25:11'),
+(7, 4, 'ORD-20260204-0007', 'feldolgozás', 30961, 'GLS futár', 'Bankkártya', 'Teszt rendelés', 'Éva Tóth', 'Teszt utca 4', 'Budapest', '1117', '2026-03-03 07:25:11', '2026-03-03 07:25:11'),
+(8, 4, 'ORD-20260204-0008', 'fizetve', 72711, 'GLS futár', 'Bankkártya', 'Teszt rendelés', 'Éva Tóth', 'Teszt utca 4', 'Budapest', '1117', '2026-03-03 07:25:11', '2026-03-03 07:25:11'),
+(9, 5, 'ORD-20260204-0009', 'kész', 45212, 'GLS futár', 'Bankkártya', 'Teszt rendelés', 'László Horváth', 'Teszt utca 5', 'Budapest', '1117', '2026-03-03 07:25:11', '2026-03-03 07:25:11'),
+(10, 5, 'ORD-20260204-0010', 'feldolgozás', 79324, 'GLS futár', 'Bankkártya', 'Teszt rendelés', 'László Horváth', 'Teszt utca 5', 'Budapest', '1117', '2026-03-03 07:25:11', '2026-03-03 07:25:11');
 
 CREATE TABLE rendeles_tetelek (
     id              BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -115,36 +154,185 @@ CREATE TABLE rendeles_tetelek (
     FOREIGN KEY (termek_id) REFERENCES termekek(id) ON DELETE RESTRICT
 );
 
-INSERT INTO kategoriak (slug, nev, kep, sorrend) VALUES
-('kutya',     'Kutya',     'img/kutya.png',     1),
-('macska',    'Macska',    'img/macska.png',    2),
-('ragcsalo',  'Rágcsáló',  'img/ragcsalo.png',  3),
-('hullo',     'Hüllő',     'img/hullo.png',     4),
-('madar',     'Madár',     'img/madar.png',     5),
-('hal',       'Hal', 'img/hal.png', 6);
+INSERT INTO `kategoriak` (`id`, `slug`, `nev`, `kep`, `sorrend`) VALUES
+(1, 'kutya', 'Kutya', 'img/kutya.png', 1),
+(2, 'macska', 'Macska', 'img/macska.png', 2),
+(3, 'ragcsalo', 'Rágcsáló', 'img/ragcsalo.png', 3),
+(4, 'hullo', 'Hüllő', 'img/hullo.png', 4),
+(5, 'madar', 'Madár', 'img/madar.png', 5),
+(6, 'hal', 'Hal', 'img/hal.png', 6);
 
-INSERT INTO alkategoriak (kategoria_id, slug, nev, sorrend) VALUES
-(1, 'poraz',     'Pórázok', 1),
-(1, 'tal',       'Tálak', 2),
-(1, 'ham',       'Hámok', 3),
-(1, 'bolha',     'Bolha- és kullancsírtók', 4),
-(1, 'nyakorv',   'Nyakörvek', 5),
-(1, 'tap',       'Tápok', 6),
-(2, 'jatek',     'Játékok', 1),
-(2, 'tal',       'Tálak', 2),
-(2, 'ham',       'Hámok', 3),
-(2, 'bolha',     'Bolhaírtó szerek', 4),
-(2, 'nyakorv',   'Nyakörvek', 5),
-(2, 'tapm',      'Macska tápok', 6);
+INSERT INTO `termek_velemenyek` (`id`, `termek_id`, `felhasznalo_id`, `vendeq_nev`, `ertekeles`, `cim`, `velemeny`, `segitett_igen`, `segitett_nem`, `ellenorzott`, `elfogadva`, `datum`) VALUES
+(11, 1, 1, 'János Kovács', 5, 'Nagyon elégedett vagyok', 'A kutyám imádja ezt a tápot, sokkal szebb lett a szőre.', 0, 0, 1, 1, '2025-12-15 09:22:00'),
+(12, 1, 2, 'Anna Nagy', 4, 'Jó, de kicsit drága', 'Minőségi táp, de sajnos ritkán van akció.', 0, 0, 1, 1, '2026-01-08 13:35:00'),
+(13, 10, 3, 'Péter Szabó', 5, 'A legjobb hám!', 'A német juhászomnak vettem, tökéletesen bírja a húzást.', 0, 0, 1, 1, '2025-11-20 08:15:00'),
+(14, 10, 1, 'János Kovács', 5, 'Erős és kényelmes', 'Nagy kutyás gazdiknak kötelező darab!', 0, 0, 1, 1, '2026-01-22 17:45:00'),
+(15, 12, 4, 'Éva Tóth', 5, 'Megmentette a kutyámat', 'Veseprobléma után ez a táp sokat segített.', 0, 0, 1, 1, '2025-10-05 09:10:00'),
+(16, 3, 5, 'László Horváth', 4, 'Jó ár-érték arány', 'Puha és kényelmes, csak a szíj egy kicsit rövid.', 0, 0, 1, 1, '2026-01-12 15:50:00'),
+(17, 15, 2, 'Anna Nagy', 5, 'A nyuszik imádják', 'Pormentes, szagtalan, tökéletes alom.', 0, 0, 1, 1, '2025-12-28 07:30:00'),
+(18, 8, 3, 'Péter Szabó', 5, 'Nagytestű kutyámnak tökéletes', 'A 65 kg-os dogomnak vettem, nem puffad tőle.', 0, 0, 1, 1, '2026-02-01 18:20:00'),
+(19, 20, 4, 'Éva Tóth', 5, 'Tágas és stabil', 'A törpenyulaim nagyon boldogok benne.', 0, 0, 1, 1, '2025-11-10 12:45:00'),
+(20, 5, 1, 'János Kovács', 3, 'Elmegy, de nem tökéletes', 'A csat kicsit gyenge, hamar kikaparta a szőrt.', 0, 0, 1, 1, '2026-01-18 19:10:00'),
+(21, 18, 5, 'László Horváth', 5, 'A macskám végre megeszi', 'A perzsa cicám válogatós volt, ezt minden maradék nélkül megeszi.', 0, 0, 1, 1, '2025-12-05 16:55:00'),
+(22, 7, 2, 'Anna Nagy', 4, 'Idős kutyámnak jó', 'A 12 éves golden retrieverem könnyebben emészti.', 0, 0, 1, 1, '2026-01-30 10:40:00'),
+(23, 16, 3, 'Péter Szabó', 5, 'Professzionális minőség', 'A szakállas agámámnak vettem, nagyon stabil.', 0, 0, 1, 1, '2025-09-25 12:15:00'),
+(24, 19, 4, 'Éva Tóth', 5, 'Törpepapagájoknak tökéletes', 'Nagyon tágas, a madaraim boldogok benne.', 0, 0, 1, 1, '2026-02-03 08:05:00'),
+(25, 8, 5, 'László Horváth', 5, 'Ár-érték bajnok', 'A golden retrieverem szőre még sosem volt ilyen fényes.', 0, 0, 1, 1, '2025-07-12 11:55:00');
+-- Indexek a kiírt táblákhoz
+--
 
-INSERT INTO termek_velemenyek (termek_id, felhasznalo_id, vendeq_nev, ertekeles, cim, velemeny, ellenorzott, datum) VALUES
-(1, NULL, 'Kovács Béla', 5, 'Szuper táp, a kutyám imádja!', 'A Royal Canin Mini Adult óta sokkal szebb a szőre a törpe uszkárnak, és végre nem válogatós többé. Nagyon ajánlom!', 1, '2025-01-15 14:22:33'),
-(1, NULL, 'Szabó Anita', 4, 'Jó, de kicsit drága', 'Minősége kiváló, a kutyusom egészségesen tartja, de az árért több akció is elférne. Ettől függetlenül újra veszem.', 1, '2025-03-22 09:11:45'),
-(3, NULL, 'Nagy István', 5, 'A legjobb hám, amit valaha vettem', 'A JULIUS-K9 erőhám piros XL tökéletesen illeskedik a németjuhászomra, végre nem húz annyira séta közben. Kötelező darab!', 1, '2025-02-28 18:47:12'),
-(7, NULL, 'Kiss Eszter', 5, 'A macskám rajong érte', 'A Felix Fantastic duplán finom az egyetlen nedves táp, amit maradéktalanul megeszik a perzsa cicám. 10/10!', 1, '2025-04-10 11:30:55'),
-(5, NULL, 'Tóth Gábor', 3, 'Elmegy, de van jobb is', 'A Trixie kerámia tálak szépek, de az állvány kicsit billeg. Közepes méretű kutyánál még oké, de nagyobbnál nem ajánlom.', 0, '2025-05-19 20:05:21'),
-(12, NULL, 'Horváth Lili', 5, 'Végre nem vakarózik!', 'A Frontline Tri-Act után eltűntek a bolhák a spánielről, és még most, hónapok múlva sem jöttek vissza. Köszönöm!', 1, '2025-06-30 16:18:44'),
-(2, NULL, 'Varga Tamás', 5, 'Ár-érték bajnok', 'Bosch Adult Menue 15 kg-os zsákot vettem, és a golden retrieverem szőre még sosem volt ilyen fényes. Profi választás!', 1, '2025-07-12 13:55:19'),
-(9, NULL, 'Papp Réka', 2, 'Nem érte meg az árát', 'A KONG Kickeroo macskajátékot 2 nap alatt széttépte a maine coonom. Vártam tőle többet ennyi pénzért.', 1, '2025-08-25 10:42:33'),
-(4, NULL, 'Molnár Péter', 5, 'Tökéletes póráz nagy kutyának', 'Rukka állítható kötélpóráz fekete – végre nem szakad el, és kényelmes a fogása is. 70 kg-os kaukázusi pásztorommal is bírja.', 1, '2025-09-05 19:27:58'),
-(15, NULL, 'Fekete Zsanett', 5, 'A nyuszik imádják!', 'Petlife Safebed papírpehely alom a legjobb döntés volt a törpenyulaimnak. Pormentes, szagtalan, és nem eszik meg. Tökéletes!', 1, '2025-11-28 08:19:07');
+--
+-- A tábla indexei `alkategoriak`
+--
+ALTER TABLE `alkategoriak`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `egyedi_slug` (`kategoria_id`,`slug`);
+
+--
+-- A tábla indexei `felhasznalok`
+--
+ALTER TABLE `felhasznalok`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `felhasznalonev` (`felhasznalonev`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- A tábla indexei `kategoriak`
+--
+ALTER TABLE `kategoriak`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `slug` (`slug`);
+
+--
+-- A tábla indexei `kosar`
+--
+ALTER TABLE `kosar`
+  ADD PRIMARY KEY (`felhasznalo_id`,`termek_id`),
+  ADD KEY `termek_id` (`termek_id`);
+
+--
+-- A tábla indexei `rendeles_tetelek`
+--
+ALTER TABLE `rendeles_tetelek`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `rendeles_id` (`rendeles_id`),
+  ADD KEY `termek_id` (`termek_id`);
+
+--
+-- A tábla indexei `rendelések`
+--
+ALTER TABLE `rendelések`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `rendelés_szam` (`rendelés_szam`),
+  ADD KEY `felhasznalo_id` (`felhasznalo_id`);
+
+--
+-- A tábla indexei `termekek`
+--
+ALTER TABLE `termekek`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `egyedi_slug` (`slug`),
+  ADD KEY `alkategoria_id` (`alkategoria_id`);
+
+--
+-- A tábla indexei `termek_velemenyek`
+--
+ALTER TABLE `termek_velemenyek`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `felhasznalo_id` (`felhasznalo_id`),
+  ADD KEY `idx_termek` (`termek_id`),
+  ADD KEY `idx_ertekeles` (`ertekeles`);
+
+--
+-- A kiírt táblák AUTO_INCREMENT értéke
+--
+
+--
+-- AUTO_INCREMENT a táblához `alkategoriak`
+--
+ALTER TABLE `alkategoriak`
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT a táblához `felhasznalok`
+--
+ALTER TABLE `felhasznalok`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT a táblához `kategoriak`
+--
+ALTER TABLE `kategoriak`
+  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT a táblához `rendeles_tetelek`
+--
+ALTER TABLE `rendeles_tetelek`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT a táblához `rendelések`
+--
+ALTER TABLE `rendelések`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT a táblához `termekek`
+--
+ALTER TABLE `termekek`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
+--
+-- AUTO_INCREMENT a táblához `termek_velemenyek`
+--
+ALTER TABLE `termek_velemenyek`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- Megkötések a kiírt táblákhoz
+--
+
+--
+-- Megkötések a táblához `alkategoriak`
+--
+ALTER TABLE `alkategoriak`
+  ADD CONSTRAINT `alkategoriak_ibfk_1` FOREIGN KEY (`kategoria_id`) REFERENCES `kategoriak` (`id`) ON DELETE CASCADE;
+
+--
+-- Megkötések a táblához `kosar`
+--
+ALTER TABLE `kosar`
+  ADD CONSTRAINT `kosar_ibfk_1` FOREIGN KEY (`felhasznalo_id`) REFERENCES `felhasznalok` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `kosar_ibfk_2` FOREIGN KEY (`termek_id`) REFERENCES `termekek` (`id`) ON DELETE CASCADE;
+
+--
+-- Megkötések a táblához `rendeles_tetelek`
+--
+ALTER TABLE `rendeles_tetelek`
+  ADD CONSTRAINT `rendeles_tetelek_ibfk_1` FOREIGN KEY (`rendeles_id`) REFERENCES `rendelések` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `rendeles_tetelek_ibfk_2` FOREIGN KEY (`termek_id`) REFERENCES `termekek` (`id`);
+
+--
+-- Megkötések a táblához `rendelések`
+--
+ALTER TABLE `rendelések`
+  ADD CONSTRAINT `rendelések_ibfk_1` FOREIGN KEY (`felhasznalo_id`) REFERENCES `felhasznalok` (`id`);
+
+--
+-- Megkötések a táblához `termekek`
+--
+ALTER TABLE `termekek`
+  ADD CONSTRAINT `termekek_ibfk_1` FOREIGN KEY (`alkategoria_id`) REFERENCES `alkategoriak` (`id`) ON DELETE CASCADE;
+
+--
+-- Megkötések a táblához `termek_velemenyek`
+--
+ALTER TABLE `termek_velemenyek`
+  ADD CONSTRAINT `termek_velemenyek_ibfk_1` FOREIGN KEY (`termek_id`) REFERENCES `termekek` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `termek_velemenyek_ibfk_2` FOREIGN KEY (`felhasznalo_id`) REFERENCES `felhasznalok` (`id`) ON DELETE SET NULL;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
