@@ -1,0 +1,21 @@
+﻿<Window x:Class="Projekt_wpf.Nevjegy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_wpf"
+        mc:Ignorable="d"
+        Title="Nevjegy" Height="450" Width="800">
+    <Grid>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 40 0 0" FontSize="16" Content="A projektet készítette: Péterffy Dominika, Kamecz Martin, Hegymegi-Kiss Ákos"/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 80 0 0" FontSize="16" Content="13.A osztályos tanulók"/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,125,0,0" FontSize="16" Content="Projektünk témájának a kisállatokkal kapcsolatos termékeket árusító webshopot azért "/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,155,0,0" FontSize="16" Content="választottuk, mert sok ember életében kiemelt szerepet töltenek be a házi kedvencek. "/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,185,0,0" FontSize="16" Content="Fontosnak tartjuk, hogy a gazdik könnyen és megbízhatóan juthassanak hozzá minden "/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,215,0,0" FontSize="16" Content="szükséges eszközhöz, legyen szó eledelről, játékokról vagy ápolási termékekről."/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,245,0,0" FontSize="16" Content="Emellett a téma kreatív lehetőségeket kínál a felhasználói élmény,a dizájn és az adatkezelés terén is,"/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,275,0,0" FontSize="16" Content="így ideális alapot biztosít egy modern és hasznos webes alkalmazás elkészítéséhez."/>
+        
+        <Button x:Name="btnClose" VerticalAlignment="Bottom" Margin="0 0 0 60" Width="100" Height="20" Content="Bezár" Click="btnClose_Click"/>
+    </Grid>
+</Window>
