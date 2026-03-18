@@ -14,7 +14,7 @@ namespace Projekt_wpf
         private static List<int> DeletedIds { get; } = new List<int>();
         private int selectedIndex = -1;
 
-        private string connectionString = "server=localhost;database=kisallat_webshop;uid=root;pwd="; // Add password if needed
+        private string connectionString = "Server=s61.tarhely.com;Database=kisalla9_webshop;Uid=kisalla9_user;Pwd=Webshop123.;";
 
         public MainWindow()
         {
